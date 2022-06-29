@@ -16,6 +16,7 @@ namespace Class0620
             class0622.Method0622();
             */
 
+            /*
             var class0628 = new Class0628();
             //class0628.SutrumpintoTekstoIlgis();
             //class0628.ZodziuKiekis();
@@ -23,6 +24,11 @@ namespace Class0620
             //class0628.TarpuKiekisPradzioje();
             //class0628.TarpaiPriekyIrGale();
             class0628.ARaidziuSkaiciavimas();
+            */
+
+            var class0629 = new Class0629();
+            //class0629.TekstasMokausi();
+            class0629.PirmosARaidesVieta();
         }
     }
             
