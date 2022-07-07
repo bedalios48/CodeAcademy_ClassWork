@@ -7,10 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class0620", "Class0620\Clas
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1045E5EB-2647-425A-8FF4-5D226F048E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class0620.Tests", "Class0620.Tests\Class0620.Tests.csproj", "{2FE6DAFD-3311-477C-95ED-0C2601391A26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class0620.Tests", "Class0620.Tests\Class0620.Tests.csproj", "{2FE6DAFD-3311-477C-95ED-0C2601391A26}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3D11C1E5-A804-4FFC-A381-6BA7D79B9B15} = {3D11C1E5-A804-4FFC-A381-6BA7D79B9B15}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class07", "Class07\Class07.csproj", "{63ED77D6-3F06-4F56-AF27-84521A02DB7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{2FE6DAFD-3311-477C-95ED-0C2601391A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FE6DAFD-3311-477C-95ED-0C2601391A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FE6DAFD-3311-477C-95ED-0C2601391A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63ED77D6-3F06-4F56-AF27-84521A02DB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63ED77D6-3F06-4F56-AF27-84521A02DB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63ED77D6-3F06-4F56-AF27-84521A02DB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63ED77D6-3F06-4F56-AF27-84521A02DB7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
