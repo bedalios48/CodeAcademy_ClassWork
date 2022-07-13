@@ -25,9 +25,9 @@ namespace Class07.ClassWork
         {
             var sb = new StringBuilder();
             var result = new StringBuilder();
-            for(int i = 0; i <= skaicius; i++)
+            for(int i = 1; i <= skaicius; i++)
             {
-                sb.Append(skaicius.ToString());
+                sb.Append(i.ToString());
                 result.Append(sb.ToString());
                 result.Append(Environment.NewLine);
             }
@@ -61,9 +61,9 @@ namespace Class07.ClassWork
         {
             var sb = new StringBuilder();
             var result = new StringBuilder();
-            for (int i = 0; i <= 2*skaicius-1; i++)
+            for (int i = 1; i <= 2*skaicius; i++)
             {
-                if (i<skaicius)
+                if (i<=skaicius)
                     sb.Append(skaicius.ToString());
                 else
                     sb.Remove(sb.Length - 1, 1);
@@ -124,6 +124,194 @@ namespace Class07.ClassWork
             }
 
             return skaicius;
+        }
+
+        public void SkaiciuGrupes()
+        {
+            /*Parašykite metodą SkaiciuEile kuri išvestu vienoje eilutėje skaičių grupes tokiu principu: -> 1 -> 11 -> 111 -> 1111 -> 11111 -> .......
+            programa turi paprašyti nurodyti skaičių ir grupių kiekį
+
+            naudokite for ir StringBuilder*/
+
+            var skaicius = GautiSkaiciu();
+            Console.WriteLine("Iveskite grupiu kieki:");
+            var kiekis = int.Parse(Console.ReadLine());
+            Console.WriteLine(SkaiciuEile(skaicius, kiekis));
+        }
+
+        private string SkaiciuEile(int skaicius, int kiekis)
+        {
+            var sb = new StringBuilder();
+            var result = new StringBuilder();
+
+            for (int i = 1; i<= kiekis; i++)
+            {
+                sb.Append(skaicius);
+                result.Append(" -> ");
+                result.Append(sb);
+            }
+
+            return result.ToString();
+        }
+
+        public void DaugybosLentele()
+        {
+            /*Sukurkite programa, kuri paprasytu naudotojo ivesti skaiciu. Ivedus skaiciu turetu atspausdinti to skaiciaus daugybos lentele. Pvz
+            15 X 1 = 15                                                                                                   
+            15 X 2 = 30                                                                                                  
+            15 X 3 = 45                                                                                                   
+            15 X 4 = 60                                                                                                  
+            15 X 5 = 75                                                                                                   
+            15 X 6 = 90                                                                                                  
+            15 X 7 = 105                                                                                                 
+            15 X 8 = 120                                                                                                 
+            15 X 9 = 135                                                                                                 
+            15 X 10 = 150*/
+
+            Console.WriteLine("Iveskite skaiciu:");
+            var skaicius = int.Parse(Console.ReadLine());
+            Console.WriteLine(DaugybosLentele(skaicius));
+        }
+
+        private string DaugybosLentele(int skaicius)
+        {
+            var lentele = new StringBuilder();
+
+            for (int i = 1; i <= 10; i++)
+            {
+                var sandauga = i * skaicius;
+                lentele.Append(skaicius);
+                lentele.Append(" X ");
+                lentele.Append(i);
+                lentele.Append(" = ");
+                lentele.Append(sandauga);
+                lentele.Append(Environment.NewLine);
+            }
+
+            return lentele.ToString();
+        }
+
+        public void Skaiciuotuvas()
+        {
+            /* Sukurti skaiciuotuva. Ijungus programa mes turetume gauti pranesima “1. Nauja operacija 2. Testi su rezultatu 3. Iseiti”. Pasirinkus 1 turetu ismesti ”
+            1. Sudetis
+            2. Atimtis
+            3. Daugyba
+            4. Dalyba”
+            Pasirinkus viena is operaciju programa turetu paprasyti naudotoja ivesti pirma ir antra skaicius, o gale isvesti rezultata ant ekrano ir uzklausti ar naudotojas nori atlikti nauja operacija ar testis u rezultatu. Sudeties pvz:
+            “1
+            15
+            45
+            Rezultatas: 60
+            1. Nauja operacija 2. Testi su rezultatu 3. Iseiti”
+            Pasirinkus 2 programa turetu paprasyti ivesti kokia operacija turetu buti atliekama ir paprasyti TIK SEKANCIO SKAITMENS. Pasirinkus 3 programa turetu issijungti. Visa kita turetu veikti tokiu pat budu.
+            BONUS1: Iskelkite operacijas i metodus
+            BONUS2: Parasykite operacijoms validacijas pries ivestus neteisingus skaicius. Pvz: dalyba is nulio, neteisingu ivesciu prevencija pvz kada tikimasi gauti skaiciu, bet gaunamas char arba string.
+            BONUS3: Parasyti unit testus uztikrinant operaciju veikima
+            BONUS4: Parasyti laipsnio pakelimo ir saknies traukimo operacija*/
+            PagrindinisMeniu(null);
+        }
+
+        private void PagrindinisMeniu(double? pirmas)
+        {
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Turimas skaicius: {0}", pirmas);
+            Console.WriteLine("1. Nauja operacija" + Environment.NewLine +
+                "2. Testi su rezultatu" + Environment.NewLine +
+                "3. Iseiti");
+            ApdorotiPasirinkima(pirmas);
+        }
+
+        private void ApdorotiPasirinkima(double? pirmas)
+        {
+            _ = int.TryParse(Console.ReadLine(), out var pasirinkimas);
+            
+            switch(pasirinkimas)
+            {
+                case 1:
+                    OperacijuMeniu(null);
+                        break;
+                case 2:
+                    OperacijuMeniu(pirmas);
+                    break;
+                case 3:
+                    Environment.Exit(1);
+                    Console.WriteLine();
+                    break;
+                default:
+                    Console.WriteLine("Blogas skaicius. Paspauskite bet koki klavisa");
+                    Console.ReadLine();
+                    PagrindinisMeniu(pirmas);
+                    break;
+            }
+        }
+
+        private void OperacijuMeniu(double? pirmas)
+        {
+            Console.WriteLine("1. Sudetis" + Environment.NewLine +
+                "2.Atimtis" + Environment.NewLine +
+                "3.Daugyba"+ Environment.NewLine +
+            "4.Dalyba");
+            ApdorotiOperacija(pirmas);
+        }
+
+        private void ApdorotiOperacija(double? pirmas)
+        {
+            var arSkaicius = int.TryParse(Console.ReadLine(), out var pasirinkimas);
+
+            if (!arSkaicius || pasirinkimas < 1 || pasirinkimas > 4)
+            {
+                Console.WriteLine("Blogas pasirinkimas!");
+                PagrindinisMeniu(pirmas);
+            }
+
+            double antras;
+
+            if (pirmas == null)
+            {
+                Console.WriteLine("Iveskite pirma ir antra skaicius:");
+                if (!double.TryParse(Console.ReadLine(), out var pirmasN) | !double.TryParse(Console.ReadLine(), out antras))
+                {
+                    Console.WriteLine("Blogi skaiciai");
+                    PagrindinisMeniu(pirmas);
+                }
+                pirmas = pirmasN;
+            }
+            else
+            {
+                Console.WriteLine("Iveskite antra skaiciu:");
+                if (!double.TryParse(Console.ReadLine(), out antras))
+                {
+                    Console.WriteLine("Blogi skaiciai");
+                    PagrindinisMeniu(pirmas);
+                }
+            }
+
+            var rezultatas = pasirinkimas switch
+            {
+                1 => Sudetis((double)pirmas, antras),
+                2 => Atimtis((double)pirmas, antras),
+                3 => Daugyba((double)pirmas, antras),
+                4 => Dalyba((double)pirmas, antras),
+                _ => 0
+            };
+
+            Console.WriteLine("Rezultatas: {0}", rezultatas);
+            PagrindinisMeniu(rezultatas);
+        }
+
+        private double Sudetis(double pirmas, double antras) => pirmas + antras;
+        private double Atimtis(double pirmas, double antras) => pirmas - antras;
+        private double Daugyba(double pirmas, double antras) => pirmas * antras;
+        private double Dalyba(double pirmas, double antras)
+        { 
+            if (antras == 0)
+            {
+                Console.WriteLine("Dalyba negalima!");
+                PagrindinisMeniu(pirmas);
+            }
+            return pirmas / antras;
         }
     }
 }
