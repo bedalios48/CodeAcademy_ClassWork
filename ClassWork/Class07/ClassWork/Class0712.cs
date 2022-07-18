@@ -25,7 +25,7 @@ namespace Class07.ClassWork
         {
             var sb = new StringBuilder();
             var result = new StringBuilder();
-            for(int i = 1; i <= skaicius; i++)
+            for (int i = 1; i <= skaicius; i++)
             {
                 sb.Append(i.ToString());
                 result.Append(sb.ToString());
@@ -61,9 +61,9 @@ namespace Class07.ClassWork
         {
             var sb = new StringBuilder();
             var result = new StringBuilder();
-            for (int i = 1; i <= 2*skaicius; i++)
+            for (int i = 1; i <= 2 * skaicius; i++)
             {
-                if (i<=skaicius)
+                if (i <= skaicius)
                     sb.Append(skaicius.ToString());
                 else
                     sb.Remove(sb.Length - 1, 1);
@@ -102,7 +102,7 @@ namespace Class07.ClassWork
                 result.Append(Environment.NewLine);
             }
 
-            for (int i = skaicius-1; i>0; i--)
+            for (int i = skaicius - 1; i > 0; i--)
             {
                 sb.Clear();
                 sb.Append(char.Parse(i.ToString()), i);
@@ -144,7 +144,7 @@ namespace Class07.ClassWork
             var sb = new StringBuilder();
             var result = new StringBuilder();
 
-            for (int i = 1; i<= kiekis; i++)
+            for (int i = 1; i <= kiekis; i++)
             {
                 sb.Append(skaicius);
                 result.Append(" -> ");
@@ -226,18 +226,17 @@ namespace Class07.ClassWork
         private void ApdorotiPasirinkima(double? pirmas)
         {
             _ = int.TryParse(Console.ReadLine(), out var pasirinkimas);
-            
-            switch(pasirinkimas)
+
+            switch (pasirinkimas)
             {
                 case 1:
                     OperacijuMeniu(null);
-                        break;
+                    break;
                 case 2:
                     OperacijuMeniu(pirmas);
                     break;
                 case 3:
                     Environment.Exit(1);
-                    Console.WriteLine();
                     break;
                 default:
                     Console.WriteLine("Blogas skaicius. Paspauskite bet koki klavisa");
@@ -245,6 +244,59 @@ namespace Class07.ClassWork
                     PagrindinisMeniu(pirmas);
                     break;
             }
+        }
+
+        public void IstrauktiSakni()
+        {
+            Console.WriteLine("Iveskite skaiciu:");
+            var skaicius = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Saknis: {0}", Saknis(skaicius));
+        }
+
+        private double Saknis(double sk1)
+        {
+            double root = 1;
+            int i = 0;
+
+            while (true)
+            {
+                i = i + 1;
+                root = (sk1 / root + root) / 2;
+                if (i == sk1 + 1) 
+                { break; }
+            }
+
+            return root;
+        }
+
+        static int IntAsk(string specify = "an int number")
+        {
+            Console.WriteLine($"Please write {specify}: ");
+            string? input = Console.ReadLine();
+
+            for (; ; )
+            {
+                if (Int32.TryParse(input, out _) == false)
+                {
+                    Console.WriteLine("That is not an int, try again");
+                    input = Console.ReadLine();
+                }
+                else
+                {
+                    return Convert.ToInt32(input);
+                }
+            }
+        }
+
+        public void PirmaUzduotis()
+        {
+            Console.Write("Kiek norite eiluciu: ");
+            int eilutes = int.Parse(Console.ReadLine());
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i <= eilutes; i++)
+                Console.WriteLine(sb.Insert(0, i % 2).ToString());
         }
 
         private void OperacijuMeniu(double? pirmas)

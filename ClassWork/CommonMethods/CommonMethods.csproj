@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CommonMethods\CommonMethods.csproj" />
-  </ItemGroup>
-
 </Project>
