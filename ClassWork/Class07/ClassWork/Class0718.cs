@@ -90,15 +90,16 @@ namespace Class07.ClassWork
               _ B
               >  B, C, D*/
 
-            var pirma = DarbasSuKonsole.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite pirma raide:"));
-            var antra = DarbasSuKonsole.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite antra raide:"));
-            var trecia = DarbasSuKonsole.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite trecia raide:"));
+            var pirma = KintamujuModifikavimas.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite pirma raide:"));
+            var antra = KintamujuModifikavimas.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite antra raide:"));
+            var trecia = KintamujuModifikavimas.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite trecia raide:"));
 
             var raides = new char[] { pirma, antra, trecia };
-            Console.WriteLine("Surikiuotos raides: {0}", string.Join('-', SurikiuotiRaides(raides)));
+            SurikiuotiRaides(raides);
+            Console.WriteLine("Surikiuotos raides: {0}", string.Join('-', raides));
         }
 
-        private char[] SurikiuotiRaides(char[] raides)
+        private void SurikiuotiRaides(char[] raides)
         {
             var charVertes = new int[raides.Length];
             for (int i = 0; i < raides.Length; i++)
@@ -108,8 +109,6 @@ namespace Class07.ClassWork
 
             for (int i = 0; i < raides.Length; i++)
                 raides[i] = (char)charVertes[i];
-
-            return raides;
         }
 
         public void KeturiuRaidziuRikiavimas()
@@ -131,10 +130,10 @@ namespace Class07.ClassWork
             _ E
             > A-B-C-E*/
 
-            var pirma = DarbasSuKonsole.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite pirma raide:"));
-            var antra = DarbasSuKonsole.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite antra raide:"));
-            var trecia = DarbasSuKonsole.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite trecia raide:"));
-            var ketvirta = DarbasSuKonsole.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite ketvirta raide:"));
+            var pirma = KintamujuModifikavimas.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite pirma raide:"));
+            var antra = KintamujuModifikavimas.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite antra raide:"));
+            var trecia = KintamujuModifikavimas.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite trecia raide:"));
+            var ketvirta = KintamujuModifikavimas.PadidintiRaide(DarbasSuKonsole.GautiIvestaRaide("Iveskite ketvirta raide:"));
 
             var raides = new string[] { pirma.ToString(), antra.ToString(), trecia.ToString(), ketvirta.ToString() };
 
@@ -144,8 +143,9 @@ namespace Class07.ClassWork
         private string SurikiuotiRaides(string[] raides)
         {
             var sujungtosRaides = string.Join("", raides);
-            var surikiuotosRaides = SurikiuotiRaides(sujungtosRaides.ToCharArray());
-            return string.Join('-', surikiuotosRaides);
+            var charRaides = sujungtosRaides.ToCharArray();
+            SurikiuotiRaides(charRaides);
+            return string.Join('-', charRaides);
         }
     }
 }

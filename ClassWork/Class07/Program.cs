@@ -30,4 +30,8 @@ var class0718 = new Class0718();
 //class0718.DidziausiasSkaiciusMasyve(new int[] { 5, 3, 7, 6, 8, 7, 10 });
 //class0718.MasyvoRikiavimas(new int[] { 5, 8, -9, 44, -11 });
 //class0718.RaidziuRikiavimas();
-class0718.KeturiuRaidziuRikiavimas();
+//class0718.KeturiuRaidziuRikiavimas();
+
+var class0719 = new Class0719();
+//class0719.DidziausiasSkaiciusSarase(new List<int> { 8, 9, 77, 88, -9 });
+class0719.DidziausioSkaiciausPridejimas(new List<int> { 8, 9, 77, 88, -9 });

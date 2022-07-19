@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class07", "Class07\Class07.
 		{416CB139-614F-4186-BA19-01098D9DB4D7} = {416CB139-614F-4186-BA19-01098D9DB4D7}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonMethods", "CommonMethods\CommonMethods.csproj", "{416CB139-614F-4186-BA19-01098D9DB4D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonMethods", "CommonMethods\CommonMethods.csproj", "{416CB139-614F-4186-BA19-01098D9DB4D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class07.Tests", "Class07.Tests\Class07.Tests.csproj", "{D3C062E7-1422-4BFC-9815-E09A1B026ABF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +43,17 @@ Global
 		{416CB139-614F-4186-BA19-01098D9DB4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{416CB139-614F-4186-BA19-01098D9DB4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{416CB139-614F-4186-BA19-01098D9DB4D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C062E7-1422-4BFC-9815-E09A1B026ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C062E7-1422-4BFC-9815-E09A1B026ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C062E7-1422-4BFC-9815-E09A1B026ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C062E7-1422-4BFC-9815-E09A1B026ABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2FE6DAFD-3311-477C-95ED-0C2601391A26} = {1045E5EB-2647-425A-8FF4-5D226F048E0F}
+		{D3C062E7-1422-4BFC-9815-E09A1B026ABF} = {1045E5EB-2647-425A-8FF4-5D226F048E0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF3B6E4E-ED8B-4E6F-8B9A-B7AF8827D8BF}

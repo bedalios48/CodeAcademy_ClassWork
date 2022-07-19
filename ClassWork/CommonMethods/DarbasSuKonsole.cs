@@ -36,10 +36,25 @@
             }
             return raide;
         }
-
-        public static char PadidintiRaide(char raide)
+        public static void AtspausdintiSarasa(IEnumerable<string> zodziai, string zinute = null)
         {
-            return raide.ToString().ToUpper().ToCharArray().First();
+            if (zinute == null)
+            {
+                Console.WriteLine("Sarasas yra: {0}", string.Join("; ", zodziai));
+                return;
+            }
+
+            Console.WriteLine(zinute + " " + string.Join("; ", zodziai));
+        }
+        public static void AtspausdintiSarasa(IEnumerable<int> skaiciai, string zinute = null)
+        {
+            if (zinute == null)
+            {
+                Console.WriteLine("Sarasas yra: {0}", string.Join("; ", skaiciai));
+                return;
+            }
+
+            Console.WriteLine(zinute + " " + string.Join("; ", skaiciai));
         }
     }
 }
