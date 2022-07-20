@@ -34,4 +34,8 @@ var class0718 = new Class0718();
 
 var class0719 = new Class0719();
 //class0719.DidziausiasSkaiciusSarase(new List<int> { 8, 9, 77, 88, -9 });
-class0719.DidziausioSkaiciausPridejimas(new List<int> { 8, 9, 77, 88, -9 });
+//class0719.DidziausioSkaiciausPridejimas(new List<int> { 8, 9, 77, 88, -9 });
+
+var class0720 = new Class0720();
+//class0720.SkaiciuIsTekstoRikiavimas();
+class0720.SakinioZodziuRikiavimas();
