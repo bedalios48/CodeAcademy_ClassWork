@@ -58,12 +58,18 @@ namespace Class07.ClassWork
         {
             Console.WriteLine("Iveskite teksta:");
             var tekstas = Console.ReadLine();
-            var zodziai = IsskaidytiSakini(tekstas);
-            var ilgiZodziai = AtskirtiIlgesniusZodzius(zodziai, 5);
-            Console.WriteLine("Isskaidyti zodziai: {0}", string.Join(" ", SujungtiDuSarasus(zodziai, ilgiZodziai)));
-            SurikiuotiZodzius(ilgiZodziai);
+            var ilgiZodziai = IsmetytiZodzius(tekstas, 5, out var trumpiZodziai);
             Console.WriteLine("Isskaidyti surikiuoti zodziai: {0}", 
-                string.Join(" ", SujungtiDuSarasus(zodziai, ilgiZodziai)));
+                string.Join(" ", SujungtiDuSarasus(trumpiZodziai, ilgiZodziai)));
+        }
+
+        public static List<string> IsmetytiZodzius(string sakinys, int ilgoZodzioIlgis, out List<string> trumpiZodziai)
+        {
+            trumpiZodziai = IsskaidytiSakini(sakinys);
+            var ilgiZodziai = AtskirtiIlgesniusZodzius(trumpiZodziai, ilgoZodzioIlgis);
+            Console.WriteLine("Isskaidyti zodziai: {0}", string.Join(" ", SujungtiDuSarasus(trumpiZodziai, ilgiZodziai)));
+            SurikiuotiZodzius(ilgiZodziai);
+            return ilgiZodziai;
         }
 
         public static List<string> IsskaidytiSakini(string sakinys)

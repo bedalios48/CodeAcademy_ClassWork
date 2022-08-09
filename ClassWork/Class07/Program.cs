@@ -38,4 +38,7 @@ var class0719 = new Class0719();
 
 var class0720 = new Class0720();
 //class0720.SkaiciuIsTekstoRikiavimas();
-class0720.SakinioZodziuRikiavimas();
+//class0720.SakinioZodziuRikiavimas();
+
+var class0721 = new Class0721();
+class0721.KaladesKonstravimas();
