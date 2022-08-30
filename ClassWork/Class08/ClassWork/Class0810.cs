@@ -132,5 +132,7 @@ Inicializuokite klases su duomenimis (turi buti maziausiai uzpildytos 2 mokyklos
        Mokyklos pavadinima + Kiekviena mokytoja kartu su jo mokiniu vardais
        (Savarankiskai)Kiekviena mokini kartu su kiekvieno is ju pazymiais 
        (Savarankiskai)Kiekvieno studento kiekvienos pamokos pazymiu vidurki*/
+
+
     }
 }

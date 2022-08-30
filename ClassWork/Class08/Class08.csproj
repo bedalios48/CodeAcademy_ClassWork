@@ -7,4 +7,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="InitialData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Class08.Domain\Class08.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="InitialData\UserData1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
