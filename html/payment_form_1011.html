@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        .form {
+            border: 0.5px solid black;
+            margin: 10px;
+            width: 300px;
+            padding: 10px;
+        }
+        .inputs {
+            margin: 5px;
+            margin-right: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+    <body>
+        <div class="form">
+            <h2>Payment Form</h2>
+            <span>Required fields are followed by *</span>
+            <h2>Contact information</h2>
+            <div class="inputs">
+                <label for="name">Name: *</label>
+                <input type="text" id="name" name="name" value="" required size="25"/>
+            </div>
+            <div class="inputs">
+                <label for="email">E-mail: *</label>
+                <input type="text" id="email" name="email" value="" required />
+            </div>
+            <div class="inputs">
+                <label for="password">Password: *</label>
+                <input type="text" id="password" name="password" value="" required />
+            </div>
+        </div>
+    </body>
+</html>

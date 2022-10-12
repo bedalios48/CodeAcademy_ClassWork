@@ -1,0 +1,33 @@
+.red {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+}
+
+.red-row {
+    background-color: rgb(242, 95, 95);
+    color:white;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    margin: 2px;
+    flex: 1;
+    text-align: center;
+}
+
+.yellow {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+}
+
+.yellow-row {
+    background-color: rgb(250, 227, 19);
+    color:white;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    margin: 2px;
+    flex: 1;
+    text-align: center;
+}

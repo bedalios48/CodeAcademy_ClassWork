@@ -1,0 +1,112 @@
+<!DOCTYPE html lang="lt">
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description"  content="HTML mokymai" />
+        <meta name="keywords" content="HTML, CodeMistery" />
+        <meta name="author" content="Dalia Tamulyte" />
+        <meta name="wiewport" content="width-device-width, initial-scale-1.0" />
+        <title>Hello</title>
+        <style>
+            article {
+                background-color: red;
+                padding: 16px;
+                margin: 10px;
+            }
+            span {
+                background-color: black;
+                color: white;
+                padding: 16px;
+                margin: 2px
+            }
+            article.basic {
+                background-color: white;
+            }
+            span.basic {
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>block</h2>
+        <article style="display: block">
+            <span>pirmas</span>
+            <span style="display: block">antras</span>
+            <span>trecias</span>
+        </article>
+        <article>
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <h2>inline</h2>
+        <article style="display: inline; height: 50px">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <article style="display: inline">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <h2>inline-block</h2>
+        <article style="display: inline-block; height: 50px">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <article style="display: inline-block">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <h2>none</h2>
+        <article style="display: none">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <article style="display: none">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <h2>table</h2>
+        <article style="display: table">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <article style="display: table">
+            <span>pirmas</span>
+            <span>antras</span>
+            <span>trecias</span>
+        </article>
+        <h2>display: inline-block</h2>
+        <article style="display: inline-block" class="basic">
+            <p class="basic">Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad 
+                minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat.
+                <span class="basic">Duis</span>
+                <span class="basic">aute</span>
+                irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat 
+                nulla pariatur. Excepteur sint occaecat cupidatat 
+                non proident, sunt in culpa qui officia deserunt 
+                mollit anim id est laborum.
+            </p>
+            <!-- <span class="basic">Duis</span>
+            <span class="basic">aute</span>
+            <span class="basic"> 
+                irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat 
+                nulla pariatur. Excepteur sint occaecat cupidatat 
+                non proident, sunt in culpa qui officia deserunt 
+                mollit anim id est laborum.</span> -->
+        </article>
+    </body>
+</html>
