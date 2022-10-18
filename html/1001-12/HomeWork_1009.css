@@ -1,0 +1,34 @@
+body {
+    background-image: url("img/sun.jpg");
+    font-family: sans-serif;
+    color:#0c373e;
+    padding: 30px;
+}
+
+main header.main-header {
+    background-color: #57a3d0;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+}
+
+a:link {
+    color:#0c373e;
+    text-decoration: none;
+}
+
+article {
+    background-color: #57a3d0;
+    padding: 20px;
+}
+
+h4 {
+    margin: 10px;
+}
+
+#contacts {
+    background-color: #d7db6e;
+    border-top: 5px solid #0c373e;
+    border-bottom: 5px solid #0c373e;
+    padding: 20px;
+    width: 500px;
+}
