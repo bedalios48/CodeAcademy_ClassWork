@@ -131,3 +131,4 @@ for(let i = 0; i < 3; i++) {
 }
 
 console.table(candies);
+console.log("f");

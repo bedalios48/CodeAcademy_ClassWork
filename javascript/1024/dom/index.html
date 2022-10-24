@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM elements</title>
+    <link rel="stylesheet" href="css/_styles.css"/>
+</head>
+<body>
+    <h1>Hello HTML DOM elements</h1>
+    <h2>getElementsByTagName()</h2>
+    <ul>
+        <li class="drink coffee">Kava</li>
+        <li class="drink tea">Arbata</li>
+        <li class="drink water">Vanduo</li>
+        <li class="drink milk pretty_milk">Pienas</li>
+    </ul>
+    <p>
+        <button type="button" onclick="changeFirstLi()">Modifikuoti kava</button>
+    </p>
+    <p>
+        <button type="button" onclick="addMilkLi()">Prideti pieno</button>
+    </p>
+    <p>
+        <button type="button"
+        onclick="document.getElementById('lbl_li_count').innerHTML = countLi()">
+        Suskaiciuoti li
+    </button>
+    </p>
+    <p>
+        <button type="button" onclick="changeMilkToAlmondMilk()">Pakeisti piena i mogdolini piena</button>
+    </p>
+    <p>
+        <button type="button" onclick="changeCoffee()">
+            Pakeisti kava i karsta sokolada</button>
+    </p>
+    <p>
+        <button type="button" onclick="changeStyleOfWater()">
+            Pakeisti vandens spalva i melyna</button>
+    </p>
+    <p>
+        <button type="button" onclick="changeStyleOfMilk()">
+            Pakeisti pieno stiliu</button>
+    </p>
+    <div id="lbl_li_count">not counted</div>
+    <script src="js/_script.js"></script>
+</body>
+</html>
