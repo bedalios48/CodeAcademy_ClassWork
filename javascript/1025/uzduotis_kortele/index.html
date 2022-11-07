@@ -18,25 +18,25 @@
             <span class="bottom">MM/YYYY</span>
         </div>
         <div>
-            <p>
-                <label for="fld_name">Iveskite savo varda</label>
-                <input type="text" id="fld_name" />
-              </p>
-              <!-- ----------------- -->
-              <p>
-                <label for="fld_lastname">Iveskite savo pavarde</label>
-                <input type="text" id="fld_lastname" />
-              </p>
-              <!-- ----------------- -->
-              <p>
-                <label for="fld_age">Iveskite savo amziu</label>
-                <input type="text" id="fld_age" />
-              </p>
-              <!-- ----------------- -->
-              <p>
-                <label for="fld_number">Iveskite skaiciu</label>
-                <input type="text" id="fld_number" />
-              </p>
+          <form class="payment">
+            <label for="cNumber">Card Number:</label>
+            <br/>
+            <input type="text" id="cNumber" name="cNumber" />
+            <br />
+            <label for="cName">Cardholder Name:</label>
+            <br/>
+            <input type="text" id="cName" name="cName" />
+            <br />
+            <label for="eDate">Expiry Date:</label>
+            <br/>
+            <input type="text" id="eDate" name="eDate" />
+            <br />
+            <label for="sNo">Security Number:</label>
+            <br/>
+            <input type="text" id="sNo" name="sNo" />
+            <br />
+            <input type="submit" value="Pay" />
+          </form>
         </div>
     </div>
     <script src="js/_script.js"></script>
