@@ -1,6 +1,6 @@
 ﻿namespace App1121.Models.Dto
 {
-    public class FilterBookDto
+    public class FilterBookRequest
     {
         public string Pavadinimas { get; set; }
         public string Autorius { get; set; }

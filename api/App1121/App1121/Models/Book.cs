@@ -4,6 +4,10 @@ namespace App1121.Models
 {
     public class Book
     {
+        public Book()
+        {
+
+        }
         public Book(int id, string title, string author,
             CoverType coverType, int publishYear)
         {
