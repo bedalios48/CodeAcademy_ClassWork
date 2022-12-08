@@ -3,16 +3,10 @@ using App1121.Interfaces;
 using App1121.Models;
 using App1121.Models.Dto;
 
-namespace App1121
+namespace App1121.Services
 {
     public class BookWrapper : IBookWrapper
     {
-        private readonly IBookSet _bookSet;
-        public BookWrapper(IBookSet bookSet)
-        {
-            _bookSet = bookSet;
-        }
-
         public GetBookDto Bind(Book book)
         {
             return new GetBookDto
@@ -27,7 +21,6 @@ namespace App1121
         {
             return new Book
             {
-                Id = _bookSet.Books.Max(b => b.Id) + 1,
                 Author = createBook.Autorius,
                 Cover = Enum.Parse<CoverType>(createBook.KnygosTipas),
                 PublishYear = createBook.Isleista.Year,

@@ -1,7 +1,8 @@
 ﻿using App1121.Enums;
+using App1121.Interfaces;
 using App1121.Models;
 
-namespace App1121
+namespace App1121.Data
 {
     public class BookSet : IBookSet
     {

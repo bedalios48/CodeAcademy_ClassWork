@@ -1,6 +1,6 @@
 ﻿using App1121.Models;
 
-namespace App1121
+namespace App1121.Interfaces
 {
     public interface IBookSet
     {
