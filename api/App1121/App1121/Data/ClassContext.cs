@@ -12,6 +12,7 @@ namespace App1121.Data
 
         public DbSet<Book> Books { get; set; }
         public DbSet<LocalUser> LocalUsers { get; set; }
+        public DbSet<RoleType> RoleTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -41,6 +42,13 @@ namespace App1121.Data
                         "Stieg Larsson", CoverType.Paperback, 2007),
                         new Book(10, "The Little Mermaid", "Hans Christian Andersen",
                         CoverType.Paperback, 1836)
+                );
+
+            modelBuilder.Entity<RoleType>()
+                .HasData(
+                new RoleType(1, "Admin"),
+                new RoleType(2, "Customer"),
+                new RoleType(3, "Tester")
                 );
         }
     }

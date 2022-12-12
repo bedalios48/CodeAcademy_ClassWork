@@ -35,7 +35,7 @@ namespace App1121.Repositories
             var inputPasswordBytes = Encoding.UTF8.GetBytes(loginRequest.Password);
             var user = _db.LocalUsers.FirstOrDefault(x => x.Username.ToLower() == loginRequest.Username.ToLower());
 
-            if (user == null && !_passwordService.VerifyPasswordHash(loginRequest.Password, user.PasswordHash, user.PasswordSalt))
+            if (user == null || !_passwordService.VerifyPasswordHash(loginRequest.Password, user.PasswordHash, user.PasswordSalt))
             {
                 return new LoginResponse
                 {
@@ -44,7 +44,7 @@ namespace App1121.Repositories
                 };
             }
 
-            var token = _jwtService.GetJwtToken(user.Id, user.Role);
+            var token = _jwtService.GetJwtToken(user.Id, user.Role.Name);
 
             LoginResponse loginResponse = new()
             {
@@ -69,7 +69,7 @@ namespace App1121.Repositories
                 PasswordHash = passwordHash,
                 PasswordSalt = passwordSalt,
                 Name = registrationRequest.Name,
-                Role = registrationRequest.Role
+                Role = _db.RoleTypes.First(r => r.Name == registrationRequest.Role)
             };
 
             _db.LocalUsers.Add(user);
