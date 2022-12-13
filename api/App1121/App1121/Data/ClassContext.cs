@@ -13,6 +13,7 @@ namespace App1121.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<LocalUser> LocalUsers { get; set; }
         public DbSet<RoleType> RoleTypes { get; set; }
+        public DbSet<BorrowedBook> BorrowedBooks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -27,5 +27,6 @@ namespace App1121.Models
         public string Author { get; set; }
         public CoverType Cover { get; set; }
         public int PublishYear { get; set; }
+        public int Quantity { get; set; }
     }
 }

@@ -15,6 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddTransient<IBookWrapper, BookWrapper>();
 builder.Services.AddTransient<IBookRepository, BookRepository>();
+builder.Services.AddTransient<IBookReturnService, BookReturnService>();
+builder.Services.AddTransient<IBookBorrowService, BookBorrowService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IJwtService, JwtService>();

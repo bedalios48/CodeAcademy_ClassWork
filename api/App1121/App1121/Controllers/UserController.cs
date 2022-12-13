@@ -48,5 +48,17 @@ namespace App1121.Controllers
 
             return Ok();
         }
+
+        [HttpPut]
+        public IActionResult UpdateDebts()
+        {
+            return Ok();
+        }
+
+        [HttpPut("{userId}")]
+        public IActionResult UpdateDebt(int userId)
+        {
+            return Ok();
+        }
     }
 }

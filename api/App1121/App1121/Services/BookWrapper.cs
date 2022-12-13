@@ -13,7 +13,8 @@ namespace App1121.Services
             {
                 PavadinimasIrAutorius = book.Title + ' ' + book.Author,
                 Id = book.Id,
-                LeidybosMetai = book.PublishYear
+                LeidybosMetai = book.PublishYear,
+                Kiekis = book.Quantity
             };
         }
 
@@ -24,7 +25,8 @@ namespace App1121.Services
                 Author = createBook.Autorius,
                 Cover = Enum.Parse<CoverType>(createBook.KnygosTipas),
                 PublishYear = createBook.Isleista.Year,
-                Title = createBook.Pavadinimas
+                Title = createBook.Pavadinimas,
+                Quantity = createBook.Kiekis
             };
         }
 
@@ -36,7 +38,8 @@ namespace App1121.Services
                 Author = updateBook.Autorius,
                 Cover = Enum.Parse<CoverType>(updateBook.KnygosTipas),
                 PublishYear = updateBook.Isleista.Year,
-                Title = updateBook.Pavadinimas
+                Title = updateBook.Pavadinimas,
+                Quantity = updateBook.Kiekis
             };
         }
     }

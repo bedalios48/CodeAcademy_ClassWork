@@ -7,5 +7,6 @@
         public string Autorius { get; set; }
         public string Pavadinimas { get; set; }
         public string KnygosTipas { get; set; }
+        public int Kiekis { get; set; }
     }
 }
