@@ -77,5 +77,10 @@ namespace App1121.Repositories
             user.PasswordHash = null;
             return user;
         }
+
+        public LocalUser GetUser(int id)
+        {
+            return _db.LocalUsers.First(u => u.Id == id);
+        }
     }
 }

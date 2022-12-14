@@ -6,6 +6,6 @@ namespace App1121.Interfaces
     public interface IBookBorrowService
     {
         List<Book> GetBooks(List<int> bookIds);
-        LocalUserDto BorrowBooks(int userId, List<Book> books);
+        List<BorrowedBook> BorrowBooks(int userId, List<Book> books);
     }
 }

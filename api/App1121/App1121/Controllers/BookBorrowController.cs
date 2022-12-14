@@ -46,9 +46,7 @@ namespace App1121.Controllers
                 if (books.Count() < bookIds.Count())
                     _logger.LogWarning("Not all books are available");
 
-                var user = _bookBorrow.BorrowBooks(userId, books);
-                if(user.ErrorMessage is not null)
-                    return BadRequest(user.ErrorMessage);
+                var borrowedBooks = _bookBorrow.BorrowBooks(userId, books);
 
                 return Ok(user.BorrowedBooks);
             }
