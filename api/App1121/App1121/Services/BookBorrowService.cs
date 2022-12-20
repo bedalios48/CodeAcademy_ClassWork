@@ -24,7 +24,7 @@ namespace App1121.Services
             var user = _userRepository.GetUser(userId);
             var borrowedBooks = books.Select(b => new BorrowedBook(DateTime.Now, user, b));
             _borrowRepository.Update(borrowedBooks);
-            return borrowedBooks;
+            return borrowedBooks.ToList();
         }
 /// <inheritdoc/>
 

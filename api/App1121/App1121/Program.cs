@@ -19,11 +19,18 @@ builder.Services.AddTransient<IBookRepository, BookRepository>();
 builder.Services.AddTransient<IBookReturnService, BookReturnService>();
 builder.Services.AddTransient<IBookBorrowService, BookBorrowService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IBookBorrowRepository, BookBorrowRepository>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddDbContext<ClassContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConnection"))
     );
+builder.Services.AddHttpClient("OpenRoute", client => {
+    client.BaseAddress = new Uri(builder.Configuration["ExternalServices:OpenRouteUri"]);
+    client.Timeout = TimeSpan.FromSeconds(10);
+    client.DefaultRequestHeaders.Clear();
+});
+builder.Services.AddTransient<IOpenRouteProxyService, OpenRouteProxyService>();
 
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
 

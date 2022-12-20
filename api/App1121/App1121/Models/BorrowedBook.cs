@@ -2,6 +2,10 @@
 {
     public class BorrowedBook
     {
+        public BorrowedBook()
+        {
+
+        }
         public BorrowedBook(int id, DateTime? borrowTime, DateTime? returnTime, LocalUser user, Book book)
         {
             Id = id;

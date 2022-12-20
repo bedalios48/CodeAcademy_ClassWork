@@ -48,7 +48,7 @@ namespace App1121.Controllers
 
                 var borrowedBooks = _bookBorrow.BorrowBooks(userId, books);
 
-                return Ok(user.BorrowedBooks);
+                return Ok(borrowedBooks);
             }
             catch (Exception e)
             {
